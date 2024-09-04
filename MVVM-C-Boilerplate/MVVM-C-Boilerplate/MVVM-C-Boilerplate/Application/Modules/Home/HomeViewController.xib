@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MVVMBoilerplate" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MVVM_C_Boilerplate" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="1Fp-6a-bOP" id="q9D-MO-BC8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +20,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-9V-Gk3">
-                    <rect key="frame" x="165.33333333333334" y="413" width="62.666666666666657" height="26.333333333333314"/>
+                    <rect key="frame" x="165.33333333333334" y="79" width="62.666666666666657" height="26.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Fp-6a-bOP">
+                    <rect key="frame" x="20" y="125.33333333333331" width="353" height="425.99999999999994"/>
+                    <color key="backgroundColor" red="0.2784313725" green="0.90196078430000004" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhx-3U-pci">
+                    <rect key="frame" x="135" y="755" width="123" height="43"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Select Image"/>
+                    <connections>
+                        <action selector="didTapSelectImage:" destination="-1" eventType="touchUpInside" id="z2d-a9-g7h"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Jc1-9V-Gk3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3tM-mi-faE"/>
+                <constraint firstItem="1Fp-6a-bOP" firstAttribute="top" secondItem="Jc1-9V-Gk3" secondAttribute="bottom" constant="20" id="7TE-VS-RDt"/>
                 <constraint firstItem="Jc1-9V-Gk3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8C0-tv-pr3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qhx-3U-pci" secondAttribute="bottom" constant="20" id="Kww-DF-IoK"/>
+                <constraint firstItem="qhx-3U-pci" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tfc-dW-4Ib"/>
+                <constraint firstItem="1Fp-6a-bOP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XcT-Sf-nCn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Fp-6a-bOP" secondAttribute="trailing" constant="20" id="g3Y-JQ-8fm"/>
+                <constraint firstItem="1Fp-6a-bOP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="vlg-rc-mPB"/>
+                <constraint firstItem="Jc1-9V-Gk3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="y4p-9B-u0L"/>
             </constraints>
             <point key="canvasLocation" x="121" y="20"/>
         </view>

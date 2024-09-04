@@ -1,9 +1,3 @@
-//
-//  AuthRepository.swift
-//  MVVMBoilerplate
-//
-//  Created by Umair Afzal on 23/08/2024.
-//
 
 import Foundation
 
